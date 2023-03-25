@@ -4,6 +4,12 @@ pageClass: routes
 
 # Application Updates
 
+## Amazon
+
+### Kindle Software Updates
+
+<RouteEn author="NavePnow" example="/amazon/kindle/software-updates" path="/amazon/kindle/software-updates" radar="1"/>
+
 ## Android
 
 ### SDK Platform Tools release notes
@@ -22,11 +28,11 @@ pageClass: routes
 
 <RouteEn author="nczitzk" example="/anytxt/release-notes" path="/anytxt/release-notes"/>
 
-## Apkpure
+## APKPure
 
 ### Versions
 
-<RouteEn author="maple3142" example="/apkpure/versions/jp/jp.co.craftegg.band" path="/apkpure/versions/:region/:pkg" :paramsDesc="['Region code', 'package name']"/>
+<RouteEn author="maple3142" example="/apkpure/versions/jp.co.craftegg.band/jp" path="/apkpure/versions/:pkg/:region?" :paramsDesc="['Package name', 'Region code, `en` by default']" radar="1" anticrawler="1" puppeteer="1"/>
 
 ## App Center
 
@@ -116,7 +122,7 @@ Language
 
 ### BlueStacks 5 Release Notes
 
-<RouteEn author="TonyRL" example="/bluestacks/release/5" path="/bluestacks/release/5" radar="1" puppeteer="1"/>
+<RouteEn author="TonyRL" example="/bluestacks/release/5" path="/bluestacks/release/5" radar="1" anticrawler="1" puppeteer="1"/>
 
 ## Brave
 
@@ -232,6 +238,12 @@ Language
 
 <RouteEn author="DIYgod" example="/firefox/addons/rsshub-radar" path="/firefox/addons/:id" :paramsDesc="['Add-ons id, can be found in add-ons url']"/>
 
+## fish shell
+
+### Release Notes
+
+<RouteEn author="x2cf" example="/fishshell" path="/fishshell" radar="1" />
+
 ## FossHub
 
 ### Software Update
@@ -338,7 +350,7 @@ Refer to [#minecraft](/en/game.html#minecraft)
 
 ### Update
 
-见 [#Monster Hunter World](/en/game.html#monster-hunter-world)
+See [#Monster Hunter World](/en/game.html#monster-hunter-world)
 
 ## Neat Download Manager
 
@@ -350,7 +362,7 @@ Refer to [#minecraft](/en/game.html#minecraft)
 
 ### Switch System Update（Japan）
 
-见 [#nintendo](/game.html#nintendo)
+See [#nintendo](/game.html#nintendo)
 
 ## NPM
 
@@ -483,6 +495,21 @@ Refer to [#minecraft](/en/game.html#minecraft)
 
 <RouteEn author="Jeason0228" example="/sketch/updates" path="/sketch/updates"  />
 
+## Sony
+
+### Software Downloads
+
+<RouteEn author="NavePnow" example="/sony/downloads/product/nw-wm1am2" path="/sony/downloads/:productType/:productId" :paramsDesc="['product type', 'product id']">
+
+::: tip
+
+Open `https://www.sony.com/electronics/support` and search for the corresponding product, such as `Sony A7M4`, the website corresponding to which is `https://www.sony.com/electronics/support/e-mount-body-ilce-7-series/ilce-7m4/downloads`, where `productType` is `e-mount-body-ilce-7-series` and `productId` is `ilce-7m4`.
+
+:::
+
+</RouteEn>
+
+
 ## Thunderbird
 
 ### Changelog
@@ -532,7 +559,11 @@ Language
 
 ### Changelog
 
-<RouteEn author="cnzgray" example="/typora/changelog" path="/typora/changelog"/>
+<RouteEn author="cnzgray" example="/typora/changelog" path="/typora/changelog" radar="1"/>
+
+### Dev Release Changelog
+
+<RouteEn author="nczitzk" example="/typora/changelog/dev" path="/typora/changelog/dev" radar="1"/>
 
 ## VMware
 

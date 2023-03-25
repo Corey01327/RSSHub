@@ -340,7 +340,7 @@ Country
 
 ### News
 
-<RouteEn author="zoenglinghou" example="/google/news/Headlines/hl=en-US&gl=US&ceid=US:en" path="/google/news/:category/:locale" :paramsDesc="['Category Title', 'locales, could be found behind `?`, including `hl`, `gl`, and `ceid` as parameters']"/>
+<RouteEn author="zoenglinghou" example="/google/news/Top stories/hl=en-US&gl=US&ceid=US:en" path="/google/news/:category/:locale" :paramsDesc="['Category Title', 'locales, could be found behind `?`, including `hl`, `gl`, and `ceid` as parameters']"/>
 
 ## Grub Street
 
@@ -462,9 +462,9 @@ Provides a better reading experience (full text articles) over the official one.
 
 Edition
 
-| Taiwan | Thailand | Indonesia | Hong Kong |
-| ------ | -------- | --------- | --------- |
-| tw     | th       | id        | hk        |
+| Taiwan | Thailand | Hong Kong |
+| ------ | -------- | --------- |
+| tw     | th       | hk        |
 
 </RouteEn>
 
@@ -492,6 +492,18 @@ Edition
 
 <RouteEn author="Cerebrater xosdy" example="/matters/author/az" path="/matters/author/:uid" :paramsDesc="['Author id, can be found at author\'s homepage url']" radar="1" rssbud="1"/>
 
+## McLaren Racing
+
+### Articles
+
+<RouteEn author="Bubbu0129" example="/mclaren/en/all" path="/mclaren/:lang/:category?" :paramsDesc="['Supports English(en), Simplified Chinese(zh), and Spanish(es).', 'Default to exporting all media (all); See the table below for details']" radar="1" rssbud="1">
+
+| All Media | Article | Report | Gallery | Video | Blog | Photo Essay  |
+| --------- | ------- | ------ | ------- | ----- | ---- | -----------  |
+| all       | article | report | gallery | video | blog | photo\_essay |
+
+</RouteEn>
+
 ## Mirror
 
 ### User
@@ -514,9 +526,9 @@ Edition
 
 ### Topics
 
-<RouteEn author="emdoe" example="/nautilus/topic/Art" path="/nautilus/topic/:tid" :paramsDesc="['topic']">
+<RouteEn author="emdoe" example="/nautil/topic/arts" path="/nautil/topic/:tid" :paramsDesc="['topic']">
 
-This route provides a flexible plan with full text content to subscribe specific topic(s) on the Nautilus. Please visit [nautil.us](http://nautil.us) and click `Topics` to acquire whole topic list.
+This route provides a flexible plan with full text content to subscribe specific topic(s) on the Nautilus. Please visit [nautil.us](https://nautil.us) and click `Topics` to acquire whole topic list.
 
 </RouteEn>
 
@@ -542,13 +554,19 @@ This route provides a flexible plan with full text content to subscribe specific
 
 ### Blog
 
-<RouteEn author="ncziztk" example="/openai/blog" path="/openai/blog/:tag" :paramsDesc="['Tag, see below, All by default']">
+<RouteEn author="ncziztk StevenRCE0" example="/openai/blog" path="/openai/blog/:tag?" :paramsDesc="['Tag, see below, All by default']">
 
-| All | Research | Announcements | Events | Milestones |
-| --- | -------- | ------------- | ------ | ---------- |
-|     | research | announcements | events | milestones |
+| All | Announcements | Events | Safety & Alignment | Community | Product | Culture & Careers   | Milestones | Research |
+| --- | ------------- | ------ | ------------------ | --------- | ------- | ------------------- | ---------- | -------- |
+|     | announcements | events | safety-alignment   | community | product | culture-and-careers | milestones | research |
 
 </RouteEn>
+
+## Phoronix
+
+### News & Reviews
+
+<RouteEn author="oppliate" example="/phoronix/news_topic/Intel" path="/phoronix/:page/:queryOrItem?" :paramsDesc="['Page name', 'For `category` it corresponds to `item`, for other pages it\'s `q`. You may find available parameters from their navigator links. E.g. to subscribe to the category page `https://www.phoronix.com/scan.php?page=category&item=Computers`, fill in the path `/phoronix/category/Computers`']" radar="1"/>
 
 ## Polar
 
@@ -580,12 +598,6 @@ Compared to the official one, this feed:
 | fr       | en      | es      | zh-hans  | zh-hant  | ar      | pa     | tl      |
 
 </RouteEn>
-
-## Research Gate
-
-### Publications
-
-<RouteEn author="nczitzk" example="/researchgate/publications/Somsak-Panha" path="/researchgate/publications/:username" :paramsDesc="['Username, can be found in URL']"/>
 
 ## RSS3
 
@@ -698,7 +710,7 @@ Compared to the official one, this feed:
 
 ### News
 
-<RouteEn author="nczitzk" example="/skysports/news/ac-milan" path="/skysports/news/:team" :paramsDesc="['Team id, can be found in URL to the team page']" />\
+<RouteEn author="nczitzk" example="/skysports/news/ac-milan" path="/skysports/news/:team" :paramsDesc="['Team id, can be found in URL to the team page']" />
 
 ## Soomal
 
@@ -764,7 +776,22 @@ Compared to the official one, this feed:
 
 ### The Verge
 
-<RouteEn author="HenryQW" example="/theverge" path="/theverge">
+<RouteEn author="HenryQW vbali" example="/theverge" path="/theverge/:hub? :paramsDesc="['Hub, see below, All Posts by default']">
+
+| Hub         | Hub name            |
+| ----------- | ------------------- |
+|             | All Posts           |
+| android     | Android             |
+| apple       | Apple               |
+| apps        | Apps & Software     |
+| blackberry  | BlackBerry          |
+| culture     | Culture             |
+| gaming      | Gaming              |
+| hd          | HD & Home           |
+| microsoft   | Microsoft           |
+| photography | Photography & Video |
+| policy      | Policy & Law        |
+| web         | Web & Social        |
 
 Provides a better reading experience (full text articles) over the official one.
 
